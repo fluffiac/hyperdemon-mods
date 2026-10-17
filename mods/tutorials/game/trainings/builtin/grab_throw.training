@@ -1,0 +1,11 @@
+# GRAB+THROW (built-in)
+training 0x90A40082 "GRAB+THROW"
+builtin
+
+step "-Hold {laser} to grab a highlighted item." until grab >= 1
+step "-Tap {fire} to DROP."                      until drop >= 2
+step "-Release {laser} to THROW"                 until throw >= 2
+step "-Shoot a LASER at each item."              until (bomb1_lasered > 0) + (bomb2_lasered > 0) >= 2
+
+keep 1 gem at 10 10 -20 every 1
+keep 1 bomb at -10 10 -20 every 1

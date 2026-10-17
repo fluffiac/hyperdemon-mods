@@ -1,0 +1,12 @@
+# POWERUPS (built-in)
+training 0x13BC90F6 "POWERUPS"
+builtin
+
+step "-Touch the POWERUP to collect it."                                            until bluepowerup >= 1
+step "-Hold {laser} to collect the powerup as a LASER attack, then release to shoot." until bluepowerup_laser >= 1
+step "-DAGGER JUMP above the SNAKE to collect the POWERUP in the air."              until bluepowerup_air >= 1
+
+keep 1 bluepowerup every 1
+# The SNAKE only shows up for step 3.
+keep 1 snakes every 1 after step 2
+keep 1 gem at 0 10 -20 every 1

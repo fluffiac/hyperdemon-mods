@@ -1,0 +1,10 @@
+# ENEMY 2 (built-in)
+training 0x7EC8B39A "ENEMY 2"
+builtin
+
+step "-Damage the enemy to STUN it."                                            until scuttles_stun >= 1
+step "-When STUNNED, they will ATTACK after a short time if you are close."     until scuttles_attack >= 1
+step "-Keep the enemy STUNNED or finish it with additional damage."             until scuttles_stunned >= 3
+step "-DASH or JUMP in to a STUNNED enemy to finish it and BOOST off it."       until scuttles_boost >= 6
+
+keep 1 scuttles every 1

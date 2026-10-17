@@ -1,0 +1,11 @@
+# SKY HIGH (custom): stay airborne with dagger jumps, gem dashes and stomps.
+training 0xF0000002 "SKY HIGH"
+menu "SKY HIGH" "custom"
+clip sky_high.hdclip
+
+step "-Aim at the ground and tap {fire} to DAGGER JUMP, then repeat in the air." until air_dagger_jump >= 5
+step "-DOUBLE DAGGER JUMP up and touch the BIG GEM to do a GEM DASH."            until spawner_gem_dash >= 2
+step "-Tap {jump} in the air to DASH towards the next enemy."                    until dash >= 3
+step "-Release {forward} {left} {back} {right} and press {jump} to STOMP back down." until stomp >= 3
+
+keep 2 spawner every 1

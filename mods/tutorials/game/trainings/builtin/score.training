@@ -1,0 +1,11 @@
+# The score training (built-in; no HUD title, the big score is shown instead)
+training 0xEEE23FD8 ""
+builtin
+
+step "-Your score is constantly counting down."
+step "-Defeating enemies will increase your score and cause more enemies to appear."
+step "-Get your score above 25." until score >= 25 when playing
+
+show score
+drain score
+keep 1 spawner every 0

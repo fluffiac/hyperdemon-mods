@@ -1,0 +1,7 @@
+# DAGGER JUMP+STOMP (built-in)
+training 0x0C75D7BC "DAGGER JUMP+STOMP"
+builtin
+
+step "-Aim at the ground and tap {fire} to do a DAGGER JUMP."                         until dagger_jump >= 2
+step "-Repeat in the air to gain more height."                                        until air_dagger_jump >= 3
+step "-While in the air, release {forward} {left} {back} {right} and press {jump} to STOMP." until stomp >= 3

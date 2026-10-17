@@ -1,0 +1,8 @@
+# DODGE (built-in)
+training 0x5B48AFFC "DODGE"
+builtin
+
+step "-Hold a direction and tap {jump} when a nearby enemies' eyes flash to DODGE." until dodge >= 3
+
+# An enemy 35 units ahead of the player.
+keep 1 skull3 at 0 0 -35 every 1

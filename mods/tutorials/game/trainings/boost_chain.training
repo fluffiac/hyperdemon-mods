@@ -1,0 +1,11 @@
+# BOOST CHAIN (custom): stun a pack of ENEMY 2s and boost from one to the next.
+training 0xF0000001 "BOOST CHAIN"
+menu "BOOST CHAIN" "custom"
+clip boost_chain.hdclip
+
+step "-A pack of ENEMY 2s. Damage them to STUN them."                    until scuttles_stun >= 3
+step "-DASH or JUMP in to a STUNNED enemy to BOOST off it."              until scuttles_boost >= 3
+step "-Chain BOOSTS from enemy to enemy without touching the ground."
+step "-Keep the pack STUNNED and BOOST through all of them."             until scuttles_boost >= 10 when playing
+
+keep 3 scuttles every 0.5

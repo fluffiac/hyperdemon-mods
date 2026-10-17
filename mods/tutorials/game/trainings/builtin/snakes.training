@@ -1,0 +1,11 @@
+# ENEMY 3 (built-in)
+training 0x70892B08 "ENEMY 3"
+builtin
+
+step "-Hit anywhere to get their attention when far away."               until snakes_attention >= 1
+step "-They will STRIKE then SPIN when close."                           until snakes_spin >= 1
+step "-Hit the heads to deal damage, causing hazards to be left behind." until snakes_head_hit >= 2
+step "-Defeat the enemy to remove the hazards."                          until snakes_kill >= 2
+step "-STOMP near the heads to STUN, causing them to take more damage."  until snakes_stomp_stun >= 2
+
+keep 1 snakes every 1

@@ -1,0 +1,9 @@
+# ENEMY 4 (built-in)
+training 0x56C4BA30 "ENEMY 4"
+builtin
+
+step "-HIDES after taking damage then not being hit for a short time."                         until spiders_hide >= 1
+step "-DASH under the enemy, or get close enough to make it DROP to the ground."               until spiders_drop >= 2
+step "-Damage while DROPPED to keep weak points facing you and prevent the enemy from RISING." until spiders_dropped_damage >= 6
+
+keep 1 spiders every 1

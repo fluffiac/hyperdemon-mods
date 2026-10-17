@@ -1,0 +1,12 @@
+[package]
+name = "waves"
+version.workspace = true
+edition.workspace = true
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+hd-sdk.workspace = true
+windows-sys.workspace = true

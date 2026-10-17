@@ -1,0 +1,18 @@
+# GAUNTLET (custom): every enemy type in turn, against a draining score.
+training 0xF0000003 "GAUNTLET"
+menu "GAUNTLET" "custom"
+clip gauntlet.hdclip
+
+step "-Defeat ENEMY 1s with daggers."                         until spawner_dagger_kill >= 3
+step "-STUN ENEMY 2s and BOOST off them."                     until scuttles_boost >= 3
+step "-STOMP near the heads of ENEMY 3 to STUN it."           until snakes_stomp_stun >= 1
+step "-DASH under ENEMY 4 to make it DROP."                   until spiders_drop >= 1
+step "-Get your score above 50." until score >= 50 when playing
+
+show score
+drain score
+# Each enemy type joins once the previous step is done.
+keep 2 spawner every 1
+keep 2 scuttles every 1 after step 1
+keep 1 snakes every 2 after step 2
+keep 1 spiders every 2 after step 3

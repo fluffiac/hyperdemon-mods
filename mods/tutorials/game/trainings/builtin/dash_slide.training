@@ -1,0 +1,7 @@
+# DASH+SLIDE (built-in)
+training 0xDA100FD6 "DASH+SLIDE"
+builtin
+
+step "-Tap {jump} while in the air to do a short DASH."                     until dash >= 3
+step "-Hold to extend the DASH and start a SLIDE when reaching the ground." until slide >= 3
+step "-Release {jump} before the SLIDE ends to JUMP out of the slide."      until slide_jump >= 3

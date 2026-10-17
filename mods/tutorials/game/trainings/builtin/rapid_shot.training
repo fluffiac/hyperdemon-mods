@@ -1,0 +1,11 @@
+# RAPID+SHOT (DAGGERS) (built-in)
+training 0x5FAC820E "RAPID+SHOT (DAGGERS)"
+builtin
+
+step "-Hold {fire} for rapid fire."                until rapid_fire >= 100
+step "-Tap {fire} for shot."                       until shot >= 10
+step "-GEMS will attract to you when not firing."
+step "-Collect gems to power up these attacks."    until gems >= 10
+step "-The gems around your wrist indicate ammo."
+
+keep 1 gem at 0 10 -20 every 1

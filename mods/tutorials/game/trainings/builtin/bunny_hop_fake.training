@@ -1,0 +1,6 @@
+# BUNNY HOP+FAKE (built-in)
+training 0x282B60D5 "BUNNY HOP+FAKE"
+builtin
+
+step "-Tap {jump} as you reach the ground to BUNNY HOP."               until bunny_hop >= 3
+step "-Change movement direction right before you JUMP to do a FAKE." until fake >= 3

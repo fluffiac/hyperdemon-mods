@@ -1,0 +1,10 @@
+# LASER+RICOCHET (built-in)
+training 0x797B7874 "LASER+RICOCHET"
+builtin
+
+step "-Hold {laser} to suck in nearby gems."  until laser_charge >= 3
+step "-Release to shoot a LASER."             until laser >= 2
+step "-Suck in multiple gems and ricochet the LASER off the ground to lock on to a target." until laser_lock_on >= 2
+
+keep 1 gem at 0 10 -20 every 1
+keep 1 scuttles every 1

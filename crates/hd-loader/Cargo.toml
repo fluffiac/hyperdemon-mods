@@ -1,0 +1,15 @@
+[package]
+name = "hd-loader"
+description = "HyperDemon mod loader, deployed next to the game as winmm.dll"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "winmm"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+hd-sdk.workspace = true
+windows-sys.workspace = true
+minhook = "0.9"

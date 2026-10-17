@@ -1,0 +1,9 @@
+# ENEMY 1 (built-in)
+training 0x4789E28C "ENEMY 1"
+builtin
+
+step "-Hit anywhere to defeat with daggers."                            until spawner_dagger_kill >= 1
+step "-Hit the BIG GEM with a LASER to defeat instantly."               until spawner_gem_laser >= 1
+step "-DOUBLE DAGGER JUMP up and touch the BIG GEM to do a GEM DASH."   until spawner_gem_dash >= 1
+
+keep 1 spawner every 1
