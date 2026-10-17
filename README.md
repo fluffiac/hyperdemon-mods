@@ -1,5 +1,11 @@
 # hd-mods
 
+**AI DISCLOSURE**
+
+This project was created with the intention of exploring the reverse-engineering capabilities of Anthropic's frontier models. The code here is provided for demonstration purposes only... I have not done an extensive review on the quality of the output. Please proceed with caution. :)
+
+---
+
 A Rust modding platform for [HyperDemon](https://store.steampowered.com/app/1743850/)
 (Steam build `7612dd72…`, PE timestamp `0x66ECD8B5`).
 
